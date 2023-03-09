@@ -2,25 +2,50 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "<webclass>/styles/Home.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <div class="p-10 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-10">
-        <div class="shrink-0">
-          <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo" />
+      <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+        <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+          <div class="mx-auto max-w-md">
+            <div class="divide-y divide-gray-300/50">
+              <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+                <p>
+                  Aqui para aprernder next y tailwind
+                </p>
+
+                <button
+                type="submit"
+                class="rounded-2xl bg-emerald-300 px-5 hover:bg-emerald-500"
+              >
+                Ejercicio 1
+              </button>
+
+              </div>
+              <div class="pt-8 text-base font-semibold leading-7">
+                <p class="text-gray-900">Documentacion</p>
+                <p>
+                  <a
+                    href="https://tailwindcss.com/docs"
+                    class="text-sky-500 hover:text-sky-600 mx-0.5"
+                  >
+                    tailwind  &rarr;
+                  </a><br></br>
+                  <a
+                    href="https://tailwindcss.com/docs"
+                    class="text-sky-500 hover:text-sky-600"
+                  >
+                    Next.js  &rarr;
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="text-xl font-medium text-black">ChitChat</div>
-          <p class="text-slate-500">You have a new message!</p>
-        </div>
-      </div>
-      <div className="p-10 max-w-sm mx-auto bg-black rounded-xl shadow-lg flex items-center space-x-10">
-        <button className="bg-sky-500 hover:bg-sky-700 rounded-xl flex-auto">
-          Mira este trucaso
-        </button>
       </div>
     </>
   );
